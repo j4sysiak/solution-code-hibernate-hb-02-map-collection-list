@@ -6,11 +6,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pl.jaceksysiak</groupId>
-	<artifactId>solution-code-hibernate-hb-01-map-collection-set</artifactId>
+	<artifactId>solution-code-hibernate-hb-02-map-collection-list</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>solution-code-hibernate-hb-01-map-collection-set</name>
+	<name>solution-code-hibernate-hb-02-map-collection-list</name>
 
 	<properties>
 		<java.version>1.8</java.version>

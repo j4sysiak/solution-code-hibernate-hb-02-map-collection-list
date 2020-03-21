@@ -1,6 +1,8 @@
 package pl.jaceksysiak.hibernate.demo.entity;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CollectionTable;
@@ -11,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -31,10 +34,10 @@ public class Student {
 	private String email;
 		
 	@ElementCollection
-	@CollectionTable(name="image", //defaults to student_images
-					joinColumns = @JoinColumn(name="student_id"))
+	@CollectionTable(name="image")
+	@OrderColumn
 	@Column(name="file_name") //defaults to images
-	private Set<String> images = new HashSet<String>();
+	private List<String> images = new ArrayList<String>();
 	
 	
 	public Student(String firstName, String lastName, String email) {
@@ -76,11 +79,11 @@ public class Student {
 	}
 
 
-	public Set<String> getImages() {
+	public List<String> getImages() {
 		return images;
 	}
 
-	public void setImages(Set<String> images) {
+	public void setImages(List<String> images) {
 		this.images = images;
 	}
 
